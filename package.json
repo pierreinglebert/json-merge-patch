@@ -1,0 +1,36 @@
+{
+  "name": "json-merge-patch",
+  "version": "0.1.0",
+  "description": "Implementation of JSON Merge Patch (RFC 7396)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^2.2.0"
+  },
+  "devDependencies": {
+    "istanbul": "^0.3.11",
+    "mocha": "^2.2.1"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pierreinglebert/json-merge-patch.git"
+  },
+  "keywords": [
+    "JSON",
+    "Merge",
+    "Patch",
+    "rfc",
+    "7396"
+  ],
+  "author": "Pierre Inglebert <pierre.inglebert@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pierreinglebert/json-merge-patch/issues"
+  },
+  "homepage": "https://github.com/pierreinglebert/json-merge-patch"
+}
