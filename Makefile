@@ -9,7 +9,8 @@ test-cov:
 	./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec --recursive test
 
 test-coveralls:
-	./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec --recursive test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+	./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec --recursive test
+	cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js || true
 	rm -rf lib-cov
 
 clean:
