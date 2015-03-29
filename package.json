@@ -6,10 +6,8 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-    "chai": "^2.2.0"
-  },
   "devDependencies": {
+    "chai": "^2.2.0",
     "coveralls": "^2.11.2",
     "istanbul": "^0.3.11",
     "mocha": "^2.2.1"
