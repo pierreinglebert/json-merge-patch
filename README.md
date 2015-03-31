@@ -80,6 +80,11 @@ Applies `patch` on `obj`.
 
 Generates a `patch` Object from source and target Object.
 
+
+#### jsonmergepatch.merge (`patch1` Object, `patch2` Object) : `patch` Object
+
+Generates a `patch` Object by merging patch1 and patch2.
+
 ## Running tests
 
 ```sh
