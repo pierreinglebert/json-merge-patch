@@ -31,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/pierreinglebert/json-merge-patch/issues"
   },
-  "homepage": "https://github.com/pierreinglebert/json-merge-patch"
+  "homepage": "https://github.com/pierreinglebert/json-merge-patch",
+  "dependencies": {
+    "deep-equal": "^1.0.0"
+  }
 }
