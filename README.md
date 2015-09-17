@@ -3,6 +3,8 @@ JSON Merge Patch
 
 [![build status][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
+[![Dependency Status][dep-image]][dep-url]
+[![devDependency Status][devDep-image]][devDep-url]
 
 An implementation of the JSON Merge Patch [RFC 7396](http://tools.ietf.org/html/rfc7396)
 
@@ -99,3 +101,7 @@ make test
 [travis-url]: https://travis-ci.org/pierreinglebert/json-merge-patch
 [coveralls-image]: https://img.shields.io/coveralls/pierreinglebert/json-merge-patch/master.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/pierreinglebert/json-merge-patch?branch=master
+[dep-image]: https://img.shields.io/david/pierreinglebert/json-merge-patch.svg
+[dep-url]: https://david-dm.org/pierreinglebert/json-merge-patch
+[devDep-image]: https://img.shields.io/david/dev/pierreinglebert/json-merge-patch.svg
+[devDep-url]: https://david-dm.org/pierreinglebert/json-merge-patch#info=devDependencies
