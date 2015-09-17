@@ -3,4 +3,5 @@ node_js:
   - "0.10"
   - "0.12"
   - "iojs"
+  - "4.0"
 script: npm run lint && npm run coveralls
