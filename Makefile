@@ -3,7 +3,7 @@ test:
 	@NODE_ENV=test ./node_modules/.bin/mocha -b --reporter $(REPORTER) --recursive test
 
 lint:
-	./node_modules/.bin/jshint ./lib ./index.js
+	./node_modules/.bin/eslint ./lib ./index.js
 
 test-cov:
 	./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec --recursive test

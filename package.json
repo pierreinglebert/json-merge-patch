@@ -9,6 +9,7 @@
   "devDependencies": {
     "chai": "^2.2.0",
     "coveralls": "^2.11.2",
+    "eslint": "1.4.3",
     "istanbul": "^0.3.11",
     "mocha": "^2.2.1"
   },
