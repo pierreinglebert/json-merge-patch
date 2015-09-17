@@ -14,7 +14,10 @@
     "mocha": "^2.2.1"
   },
   "scripts": {
-    "test": "make test"
+    "test": "NODE_ENV=test mocha -b --reporter spec --recursive test",
+    "lint": "eslint ./lib ./index.js",
+    "coverage": "istanbul cover _mocha -- -R spec --recursive test",
+    "coveralls": "istanbul cover _mocha -- -R spec --recursive test; cat ./coverage/lcov.info | coveralls.js || true"
   },
   "repository": {
     "type": "git",
