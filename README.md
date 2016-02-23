@@ -31,25 +31,25 @@ Applying patches:
 var source = {
   "title": "Goodbye!",
   "author" : {
-		"givenName" : "John",
-		"familyName" : "Doe"
-	}
+    "givenName" : "John",
+    "familyName" : "Doe"
+  }
 };
 
 var patch = {
-	"title": 'Hello!',
-	"author": {
-		"familyName": null
-	}
+  "title": 'Hello!',
+  "author": {
+    "familyName": null
+  }
 }
 
 var target = jsonmergepatch.apply(source, patch);
 
 // target = {
-// 	"title": "Hello!",
+//   "title": "Hello!",
 //   "author" : {
-// 		"givenName" : "John",
-// 	}
+//     "givenName" : "John",
+//   }
 // }
 ```
 
@@ -61,14 +61,14 @@ var source = {
 };
 
 var target = {
-	"title": "Hello!",
+  "title": "Hello!",
 };
 
 var patch = jsonmergepatch.generate(source, target);
 
 // patch = {
-// 	"title": 'Hello!',
-// 	"author": null
+//   "title": 'Hello!',
+//   "author": null
 // }
 ```
 
