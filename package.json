@@ -7,11 +7,11 @@
     "test": "test"
   },
   "devDependencies": {
-    "chai": "^3.2.0",
-    "coveralls": "^2.11.2",
-    "eslint": "^1.4.3",
-    "istanbul": "^0.3.11",
-    "mocha": "^2.3.2"
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.9.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^4.0.1"
   },
   "scripts": {
     "test": "NODE_ENV=test mocha -b --reporter spec --recursive test",
