@@ -109,4 +109,32 @@ describe('apply', function() {
 			{a: {bb: {}}}
 		);
 	});
+  
+  it('should replace an object with a date', function() {
+		assert.deepEqual(
+			apply({a: 'foo'}, new Date('2020-05-08')),
+			new Date('2020-05-08')
+    );
+	});
+  
+  it('should add a date attribute', function() {
+		assert.deepEqual(
+			apply({a: 'foo'}, {b: new Date('2020-05-20')}),
+      {a: 'foo', b: new Date('2020-05-20')}
+    );
+	});
+  
+  it('should replace a date attribute', function() {
+		assert.deepEqual(
+			apply({a: new Date('2020-05-08')}, {a: new Date('2020-05-20')}),
+      {a: new Date('2020-05-20')}
+    );
+	});
+  
+  it('should delete a date attribute', function() {
+		assert.deepEqual(
+			apply({a: new Date('2020-05-20')}, {a: null}),
+      {}
+    );
+	});
 });
