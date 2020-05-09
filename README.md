@@ -26,7 +26,7 @@ $ npm install json-merge-patch --save
 
 ## Usage
 
-Applying patches:
+### Applying patches:
 ```js
 var source = {
   "title": "Goodbye!",
@@ -53,7 +53,7 @@ var target = jsonmergepatch.apply(source, patch);
 // }
 ```
 
-Generating patches:
+### Generating patches:
 ```js
 var source = {
   "title": "Goodbye!",
@@ -72,6 +72,41 @@ var patch = jsonmergepatch.generate(source, target);
 // }
 ```
 
+
+### Usage with Javascript objects
+
+This library is primarily designed to work with JSON.
+Nonetheless, it is possible to use Javascript objects if the method `toJSON()` is implemented, the library will then serialize your object using it.
+```js
+var patch = jsonmergepatch.generate(
+  {
+    "title": "Goodbye!"
+  },
+  {
+    toJSON: () {
+      return {
+        "title": "I am serialized"
+      }
+    },
+  }
+);
+// patch = {
+// 	"title": "I am serialized",
+// }
+```
+
+```js
+var patch = jsonmergepatch.generate(
+  {},
+  {
+    date: new Date("2020-05-09T00:00:00.000")
+  }
+);
+// patch = {
+// 	date: "2020-05-09T00:00:00.000"
+// }
+```
+
 ## API
 
 #### jsonmergepatch.apply (`obj` Object, `patch` Object) : Object
@@ -87,10 +122,11 @@ Generates a `patch` Object from source and target Object.
 
 Generates a `patch` Object by merging patch1 and patch2.
 
+
 ## Running tests
 
 ```sh
-make test
+npm test
 ```
 
 # License
