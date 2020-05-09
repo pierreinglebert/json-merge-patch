@@ -1,18 +1,6 @@
 env:
   node: true
 
-# enable ECMAScript features
-ecmaFeatures:
-  blockBindings: true
-  templateStrings: true
-  octalLiterals: true
-  binaryLiterals: true
-  generators: true
-  forOf: true
-  objectLiteralShorthandProperties: true
-  objectLiteralShorthandMethods: true
-  classes: true
-
 rules:
   # Possible Errors
   # list: https://github.com/eslint/eslint/tree/master/docs/rules#possible-errors
@@ -49,7 +37,7 @@ rules:
   ## require spaces operator like var sum = 1 + 1;
   space-infix-ops: 2
   ## require spaces return, throw, case
-  space-return-throw-case: 2
+  keyword-spacing: 2
   ## no space before function, eg. 'function()'
   space-before-function-paren: [2, "never"]
   ## require space before blocks, eg 'function() {}'
@@ -64,8 +52,6 @@ rules:
   eol-last: 2
   ## no trailing spaces
   no-trailing-spaces: 2
-  # require space after keywords, eg 'for (..)'
-  space-after-keywords: 2
 
   # Strict Mode
   # list: https://github.com/eslint/eslint/tree/master/docs/rules#strict-mode
