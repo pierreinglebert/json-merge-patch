@@ -28,6 +28,12 @@ $ npm install json-merge-patch --save
 
 ### Applying patches:
 ```js
+jsonmergepatch.apply(obj: Object, patch: Object) : Object
+```
+Applies `patch` onto source `obj`.
+
+### Example:
+```js
 var source = {
   "title": "Goodbye!",
   "author" : {
@@ -55,6 +61,12 @@ var target = jsonmergepatch.apply(source, patch);
 
 ### Generating patches:
 ```js
+jsonmergepatch.generate(source: Object, target: Object) : Object
+```
+Compares `source` and `target` object and generates a `patch` of the changes necessary to convert `source` into `target`.
+
+### Example:
+```js
 var source = {
   "title": "Goodbye!",
   "author" : "John Doe"
@@ -71,6 +83,11 @@ var patch = jsonmergepatch.generate(source, target);
 // 	"author": null
 // }
 ```
+
+### Merging patches
+
+This function is **outside the scope of the RFC**, its purpose is to combine/squash successive patches of the same entity into one patch.
+Use it at your own risks.
 
 
 ### Usage with Javascript objects
@@ -106,22 +123,6 @@ var patch = jsonmergepatch.generate(
 // 	date: "2020-05-09T00:00:00.000"
 // }
 ```
-
-## API
-
-#### jsonmergepatch.apply (`obj` Object, `patch` Object) : Object
-
-Applies `patch` on `obj`.
-
-#### jsonmergepatch.generate (`source` Object, `target` Object) : `patch` Object
-
-Generates a `patch` Object from source and target Object.
-
-
-#### jsonmergepatch.merge (`patch1` Object, `patch2` Object) : `patch` Object
-
-Generates a `patch` Object by merging patch1 and patch2.
-
 
 ## Running tests
 
