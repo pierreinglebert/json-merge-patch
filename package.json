@@ -1,6 +1,6 @@
 {
   "name": "json-merge-patch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Implementation of JSON Merge Patch (RFC 7396)",
   "main": "index.js",
   "directories": {
