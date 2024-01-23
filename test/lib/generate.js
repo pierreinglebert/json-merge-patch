@@ -126,24 +126,24 @@ describe('generate', function() {
     );
   });
 
-  it('should return undefined if the object hasnt changed', function() {
+  it('should return {} if the object hasnt changed', function() {
     assert.deepEqual(
       generate({a: 'a'}, {a: 'a'}),
-      undefined
+      {}
     );
   });
 
-  it('should return undefined if the object with sub attributes hasnt changed', function() {
+  it('should return {} if the object with sub attributes hasnt changed', function() {
     assert.deepEqual(
       generate({a: {b: 'c'}}, {a: {b: 'c'}}),
-      undefined
+      {}
     );
   });
 
-  it('should return undefined if the array hasnt changed', function() {
+  it('should return the target if the output is an array', function() {
     assert.deepEqual(
       generate([1, 2, 3], [1, 2, 3]),
-      undefined
+      [1,2,3]
     );
   });
 
